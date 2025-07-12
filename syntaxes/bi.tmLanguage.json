@@ -1,0 +1,33 @@
+{
+  "scopeName": "source.bi",
+  "name": "B Language",
+  "patterns": [
+    {
+      "name": "keyword.control.bi",
+      "match": "\\b(main|extrn|auto|if|else|while|for|return)\\b"
+    },
+    {
+      "name": "constant.language.bi",
+      "match": "\\b(argv)\\b"
+    },
+    {
+      "name": "entity.name.function.bi",
+      "match": "\\b([a-zA-Z_]\\w*)\\s*(?=\\()"
+    },
+    {
+      "name": "comment.line.double-slash.bi",
+      "begin": "//",
+      "beginCaptures": { "0": { "name": "punctuation.definition.comment.bi" } },
+      "end": "$\\n?",
+      "name": "comment.line.double-slash.bi"
+    },
+    {
+      "name": "comment.block.bi",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "name": "comment.block.bi"
+    }
+  ],
+  "fileTypes": ["bi"],
+  "uuid": "b-lang-001"
+}

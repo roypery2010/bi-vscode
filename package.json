@@ -1,0 +1,63 @@
+{
+  "name": "bi-language-support",
+  "displayName": "B Language Support",
+  "description": "Syntax highlighting and execution support for B (.bi) files — Tsoding's B language",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roypery2010/bi-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": [
+    "onLanguage:bi",
+    "onCommand:bi.runFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "bi",
+        "aliases": ["B", "bi"],
+        "extensions": [".bi"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bi",
+        "scopeName": "source.bi",
+        "path": "./syntaxes/bi.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "bi.runFile",
+        "title": "Run B Script"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceExtname == .bi",
+          "command": "bi.runFile",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0",
+    "vscode": "^1.1.37"
+  }
+}
