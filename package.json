@@ -1,12 +1,13 @@
 {
   "name": "bi-language-support",
-  "displayName": "B Language Support",
+  "displayName": "BILanguageSupport",
   "description": "Syntax highlighting and execution support for B (.bi) files — Tsoding's B language",
   "version": "0.0.1",
+  "publisher": "RoyPerry2",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/roypery2010/bi-vscode.git"
+    "url": "https://github.com/royp/bi-vscode.git"
   },
   "engines": {
     "vscode": "^1.80.0"

@@ -1,0 +1,11 @@
+# Exclude test files, docs, and examples from the final VSIX package
+.vscode/
+node_modules/
+*.ts
+*.md
+LICENSE.md
+tsconfig.json
+.github/
+examples/
+*.bi
+bi.py
